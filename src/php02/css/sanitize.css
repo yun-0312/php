@@ -1,0 +1,719 @@
+/* Document
+* ========================================================================== */
+
+/**
+* Add border box sizing in all browsers (opinionated).
+*/
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+/**
+* 1. Add text decoration inheritance in all browsers (opinionated).
+* 2. Add vertical alignment inheritance in all browsers (opinionated).
+*/
+
+::before,
+::after {
+    vertical-align: inherit;
+    /* 2 */
+    text-decoration: inherit;
+    /* 1 */
+}
+
+/**
+* 1. Use the default cursor in all browsers (opinionated).
+* 2. Change the line height in all browsers (opinionated).
+* 3. Use a 4-space tab width in all browsers (opinionated).
+* 4. Remove the grey highlight on links in iOS (opinionated).
+* 5. Prevent adjustments of font size after orientation changes in
+*    IE on Windows Phone and in iOS.
+* 6. Breaks words to prevent overflow in all browsers (opinionated).
+*/
+
+html {
+    word-break: break-word;
+    /* 6 */
+    -moz-tab-size: 4;
+    /* 3 */
+    tab-size: 4;
+    /* 3 */
+    line-height: 1.5;
+    /* 2 */
+    cursor: default;
+    /* 1 */
+
+    -webkit-tap-highlight-color: transparent
+        /* 4 */
+    ;
+    -ms-text-size-adjust: 100%;
+    /* 5 */
+    -webkit-text-size-adjust: 100%;
+    /* 5 */
+}
+
+/* Sections
+* ========================================================================== */
+
+/**
+* Remove the margin in all browsers (opinionated).
+*/
+
+body {
+    margin: 0;
+}
+
+/**
+* Correct the font size and margin on `h1` elements within `section` and
+* `article` contexts in Chrome, Edge, Firefox, and Safari.
+*/
+
+h1 {
+    margin: 0.67em 0;
+    font-size: 2em;
+}
+
+/* Grouping content
+* ========================================================================== */
+
+/**
+* Remove the margin on nested lists in Chrome, Edge, IE, and Safari.
+*/
+
+dl dl,
+dl ol,
+dl ul,
+ol dl,
+ul dl {
+    margin: 0;
+}
+
+/**
+* Remove the margin on nested lists in Edge 18- and IE.
+*/
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+    margin: 0;
+}
+
+/**
+* 1. Add the correct sizing in Firefox.
+* 2. Show the overflow in Edge 18- and IE.
+*/
+
+hr {
+    overflow: visible;
+    /* 2 */
+    height: 0;
+    /* 1 */
+}
+
+/**
+* Add the correct display in IE.
+*/
+
+main {
+    display: block;
+}
+
+/**
+* Remove the list style on navigation lists in all browsers (opinionated).
+*/
+
+nav ol,
+nav ul {
+    padding: 0;
+    list-style: none;
+}
+
+/**
+* 1. Correct the inheritance and scaling of font size in all browsers.
+* 2. Correct the odd `em` font sizing in all browsers.
+*/
+
+pre {
+    font-size: 1em;
+    /* 2 */
+    font-family: monospace, monospace;
+    /* 1 */
+}
+
+/* Text-level semantics
+* ========================================================================== */
+
+/**
+* Remove the gray background on active links in IE 10.
+*/
+
+a {
+    background-color: transparent;
+}
+
+/**
+* Add the correct text decoration in Edge 18-, IE, and Safari.
+*/
+
+abbr[title] {
+    text-decoration: underline;
+    text-decoration: underline dotted;
+}
+
+/**
+* Add the correct font weight in Chrome, Edge, and Safari.
+*/
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+/**
+* 1. Correct the inheritance and scaling of font size in all browsers.
+* 2. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp {
+    font-size: 1em;
+    /* 2 */
+    font-family: monospace, monospace;
+    /* 1 */
+}
+
+/**
+* Add the correct font size in all browsers.
+*/
+
+small {
+    font-size: 80%;
+}
+
+/* Embedded content
+* ========================================================================== */
+
+/*
+* Change the alignment on media elements in all browsers (opinionated).
+*/
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/**
+* Add the correct display in IE 9-.
+*/
+
+audio,
+video {
+    display: inline-block;
+}
+
+/**
+* Add the correct display in iOS 4-7.
+*/
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/**
+* Remove the border on iframes in all browsers (opinionated).
+*/
+
+iframe {
+    border-style: none;
+}
+
+/**
+* Remove the border on images within links in IE 10-.
+*/
+
+img {
+    border-style: none;
+}
+
+/**
+* Change the fill color to match the text color in all browsers (opinionated).
+*/
+
+svg:not([fill]) {
+    fill: currentColor;
+}
+
+/**
+* Hide the overflow in IE.
+*/
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/* Tabular data
+* ========================================================================== */
+
+/**
+* Collapse border spacing in all browsers (opinionated).
+*/
+
+table {
+    border-collapse: collapse;
+}
+
+/* Forms
+* ========================================================================== */
+
+/**
+* Remove the margin on controls in Safari.
+*/
+
+button,
+input,
+select {
+    margin: 0;
+}
+
+/**
+* 1. Show the overflow in IE.
+* 2. Remove the inheritance of text transform in Edge 18-, Firefox, and IE.
+*/
+
+button {
+    overflow: visible;
+    /* 1 */
+    text-transform: none;
+    /* 2 */
+}
+
+/**
+* Correct the inability to style buttons in iOS and Safari.
+*/
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+/**
+* 1. Change the inconsistent appearance in all browsers (opinionated).
+* 2. Correct the padding in Firefox.
+*/
+
+fieldset {
+    padding: 0.35em 0.75em 0.625em;
+    /* 2 */
+    border: 1px solid #a0a0a0;
+    /* 1 */
+}
+
+/**
+* Show the overflow in Edge 18- and IE.
+*/
+
+input {
+    overflow: visible;
+}
+
+/**
+* 1. Correct the text wrapping in Edge 18- and IE.
+* 2. Correct the color inheritance from `fieldset` elements in IE.
+*/
+
+legend {
+    display: table;
+    /* 1 */
+    max-width: 100%;
+    /* 1 */
+    color: inherit;
+    /* 2 */
+    white-space: normal;
+    /* 1 */
+}
+
+/**
+* 1. Add the correct display in Edge 18- and IE.
+* 2. Add the correct vertical alignment in Chrome, Edge, and Firefox.
+*/
+
+progress {
+    display: inline-block;
+    /* 1 */
+    vertical-align: baseline;
+    /* 2 */
+}
+
+/**
+* Remove the inheritance of text transform in Firefox.
+*/
+
+select {
+    text-transform: none;
+}
+
+/**
+* 1. Remove the margin in Firefox and Safari.
+* 2. Remove the default vertical scrollbar in IE.
+* 3. Change the resize direction in all browsers (opinionated).
+*/
+
+textarea {
+    overflow: auto;
+    /* 2 */
+    margin: 0;
+    /* 1 */
+    resize: vertical;
+    /* 3 */
+}
+
+/**
+* Remove the padding in IE 10-.
+*/
+
+[type="checkbox"],
+[type="radio"] {
+    padding: 0;
+}
+
+/**
+* 1. Correct the odd appearance in Chrome, Edge, and Safari.
+* 2. Correct the outline style in Safari.
+*/
+
+[type="search"] {
+    outline-offset: -2px;
+    /* 2 */
+
+    -webkit-appearance: textfield;
+    /* 1 */
+}
+
+/**
+* Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+    height: auto;
+}
+
+/**
+* Correct the text style of placeholders in Chrome, Edge, and Safari.
+*/
+
+::-webkit-input-placeholder {
+    color: inherit;
+    opacity: 0.54;
+}
+
+/**
+* Remove the inner padding in Chrome, Edge, and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/**
+* 1. Correct the inability to style upload buttons in iOS and Safari.
+* 2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+    font: inherit;
+    /* 2 */
+
+    -webkit-appearance: button;
+    /* 1 */
+}
+
+/**
+* Remove the inner border and padding of focus outlines in Firefox.
+*/
+
+::-moz-focus-inner {
+    padding: 0;
+    border-style: none;
+}
+
+/**
+* Restore the focus outline styles unset by the previous rule in Firefox.
+*/
+
+:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+/**
+* Remove the additional :invalid styles in Firefox.
+*/
+
+:-moz-ui-invalid {
+    box-shadow: none;
+}
+
+/* Interactive
+* ========================================================================== */
+
+/*
+* Add the correct display in Edge 18- and IE.
+*/
+
+details {
+    display: block;
+}
+
+/*
+* Add the correct styles in Edge 18-, IE, and Safari.
+*/
+
+dialog {
+    position: absolute;
+    right: 0;
+    left: 0;
+    display: block;
+    margin: auto;
+    padding: 1em;
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: -webkit-fit-content;
+    height: fit-content;
+    border: solid;
+    background-color: white;
+    color: black;
+}
+
+dialog:not([open]) {
+    display: none;
+}
+
+/*
+* Add the correct display in all browsers.
+*/
+
+summary {
+    display: list-item;
+}
+
+/* Scripting
+* ========================================================================== */
+
+/**
+* Add the correct display in IE 9-.
+*/
+
+canvas {
+    display: inline-block;
+}
+
+/**
+* Add the correct display in IE.
+*/
+
+template {
+    display: none;
+}
+
+/* User interaction
+* ========================================================================== */
+
+/*
+* 1. Remove the tapping delay in IE 10.
+* 2. Remove the tapping delay on clickable elements
+in all browsers (opinionated).
+*/
+
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea,
+[tabindex] {
+    -ms-touch-action: manipulation;
+    /* 1 */
+    touch-action: manipulation;
+    /* 2 */
+}
+
+/**
+* Add the correct display in IE 10-.
+*/
+
+[hidden] {
+    display: none;
+}
+
+/* Accessibility
+* ========================================================================== */
+
+/**
+* Change the cursor on busy elements in all browsers (opinionated).
+*/
+
+[aria-busy="true"] {
+    cursor: progress;
+}
+
+/*
+* Change the cursor on control elements in all browsers (opinionated).
+*/
+
+[aria-controls] {
+    cursor: pointer;
+}
+
+/*
+* Change the cursor on disabled, not-editable, or otherwise
+* inoperable elements in all browsers (opinionated).
+*/
+
+[aria-disabled="true"],
+[disabled] {
+    cursor: not-allowed;
+}
+
+/*
+* Change the display on visually hidden accessible elements
+* in all browsers (opinionated).
+*/
+
+[aria-hidden="false"][hidden] {
+    display: initial;
+}
+
+[aria-hidden="false"][hidden]:not(:focus) {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+それでは、index.phpに sanitize.cssが適用されるよう、以下のように変更しましょう。 これから使用するcommon.cssファイルとindex.cssファイルもこのタイミングで読み込んでおきましょう。 追加するコード コピーしました！ <link rel="stylesheet" href="css/sanitize.css"><link rel="stylesheet" href="css/common.css"><link rel="stylesheet" href="css/index.css">スタイルを適用する時は、毎回記述します。 index.php コピーしました！ < !DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Document</title>+<link rel="stylesheet" href="css/sanitize.css">+<link rel="stylesheet" href="css/common.css">+<link rel="stylesheet" href="css/index.css"></head><body></body></html>では実際に、index.phpに表示されるヘッダーを作成していきましょう。 以下の画像の青色の部分がヘッダーになります。 教材画像 ヘッダーを作成するには、<body>タグ内に、<header>タグを追加します。 index.phpを以下のように変更しましょう。 index.php コピーしました！ <body><header class="header"><div class="header__inner"><a class="header__logo" href="/php02/index.php">World Clock </a></div></header></body>次に、ヘッダー部分が、以下画像のように表示されるようcommon.cssを編集していきます。 教材画像 index.phpで編集したclass=の後につけたクラス名に対応させて、common.cssに追記します。 common.css コピーしました！ .header {
+    background: #000;
+}
+
+.header__inner {
+    margin: 0 auto;
+    padding: 20px 15px;
+    max-width: 1230px;
+}
+
+.header__logo {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+http: //localhost/php02/index.phpを確認して、上記の画像のようになっているか確認しましょう。
+
+2. ラジオボタンの作成とスタイルの適用 次は、以下の画像の緑色の部分を追加していきます。 教材画像 タグの下に、 タグの作成します。 以下のコードを追加しましょう。 index.php コピーしました！ //前略
+<body><header class="header"> // 中略
+</header>+<main>+<div class="search-form__content">+ // ここにラジオボタンを作成します。
++</div>+</main></body>それでは、実際に以下の画像の黄色とピング色の部分の作成を行います。 教材画像 index.phpファイルに「日本と世界の時間を比較」という文字の表示とラジオボタンを作成し、画像のようにスタイルを適用していきましょう。 教材画像 まずは、「日本と世界の時間を比較」という文字をh2タグで作成します。 index.php コピーしました！ //前略
+<main><div class="search-form__content">+<div class="search-form__heading">+<h2 class="search-form__content-title">日本と世界の時間を比較</h2>+</div></div></main>次に、上海と書かれている部分は、セレクトボックスで表示するため selectタグで作成します。 今回は、selectタグを利用しているため、optionタグを利用し、value 属性で、送信する値を指定します。 optionタグは、セレクトボックスの選択肢です。 セレクトボックスの使用例 コピーしました！ <form action="detail.html" method="get"><select name="select"><option value="太郎">太郎</option><option value="次郎">次郎</option><option value="三郎">三郎</option></select></form>selectタグで選択肢全体を囲います。 そして各選択肢は、optionタグでマークアップします。 result.phpファイルへデータの送信を行うため、<form>タグを作成し、入力フォームの method 属性を「GET」にします。 以下のコードをindex.phpに追記します。 index.php コピーしました！ // 前略
+<main><div class="search-form__content"><h2 class="search-form__content-title">日本と世界の時間を比較</h2></div>+<form class="search-form" action="result.php" method="get">+<div class="search-form__item">+<select class="search-form__item-select" name="city">+<option value="シドニー">シドニー</option>+<option value="上海">上海</option>+<option value="モスクワ">モスクワ</option>+<option value="ロンドン">ロンドン</option>+<option value="ヨハネスブルグ">ヨハネスブルグ</option>+<option value="ニューヨーク">ニューヨーク</option>+</select>+</div>+</form></main> // 後略
+
+データ送信をするために、<button>タグを利用しています。 <button>タグとは、<form>タグで作成したフォームの中でボタンを作成できるタグです。 <input>タグでもボタンを作成することができ、同じ機能を持ちます。 しかし、<button>タグで作成したボタンは、ボタン上のテキストを変えたり画像を表示させたりすることができます。 index.php コピーしました！ <main><div class="search-form__content"><h2 class="search-form__content-title">日本と世界の時間を比較</h2></div><form class="search-form" action="result.php" method="get"><div class="search-form__item"><select class="search-form__item-select" name="city"><option value="シドニー">シドニー</option><option value="上海">上海</option><option value="モスクワ">モスクワ</option><option value="ロンドン">ロンドン</option><option value="ヨハネスブルグ">ヨハネスブルグ</option><option value="ニューヨーク">ニューヨーク</option></select></div>+<div class="search-form__button">+<button class="search-form__button-submit" type="submit">検索</button>+</div></form></main>以下のプルダウンから、ここまでで作成したコードを一度確認しましょう。 追加したコードは以下の通りです。 ここまでのコード 次に、CSS の記述をしていきましょう。 ラジオボタン部分が、画像のように表示されるよう、index.css を記述していきます。 教材画像 search-form__item クラスと search-form__button クラスを横並びにするために display: flex を利用します。 index.css コピーしました！ .search-form__content {
+    margin: 0 auto;
+    padding: 60px 15px;
+    max-width: 1230px;
+}
+
+.search-form__content-title {
+    text-align: center;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+}
+
+.search-form__item {
+    padding: 0 5px;
+    width: 300px;
+}
+
+.search-form__item-select {
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    appearance: none;
+}
+
+.search-form__button {
+    padding: 0 5px;
+    width: 120px;
+}
+
+.search-form__button-submit {
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+3. 比較画面の作成とスタイル適用 最後に、result.phpファイルを作成していきましょう。 教材画像 result.phpファイルは、index.phpファイルのラジオボタンで選択した都市の画像と時間が表示されるページになります。 HTML のテンプレートの作成 ヘッダーの作成 CSS ファイルの読み込み 上記三つは、index.phpファイルを作成した時と同様です。 result.php コピーしました！ < !DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>World Clock</title><link rel="stylesheet" href="css/sanitize.css"><link rel="stylesheet" href="css/common.css"><link rel="stylesheet" href="css/result.css"></head><body><header class="header"><div class="header__inner"><a class="header__logo" href="/php02/index.php">World Clock </a></div></header></body></html>それでは、実際に枠組みの緑色と黄色、ピンク色の作成を行います。 教材画像 表示内容は、PHP の処理を終えてから表示されるものなので今回の作成を終えても何も表示はされません。 result.php コピーしました！ </header><main><div class="result__content"><div class="result-cards"><div class="result-card"><div class="result-card__img-wrapper"><img class="result-card__img" src="img/" alt="国旗"></div><div class="result-card__body"><p class="result-card__city"></p><p class="result-card__time"></p></div></div><div class="result-card"><div class="result-card__img-wrapper"><img class="result-card__img" src="img/" alt="国旗"></div><div class="result-card__body"><p class="result-card__city"></p><p class="result-card__time"></p></div></div></div></div></main></body>画像と国名、時間を position を利用して、表示させています。 result.css コピーしました！ .result__content {
+    margin: 0 auto;
+    padding: 60px 15px;
+    max-width: 1230px;
+}
+
+.result-cards {
+    display: flex;
+    justify-content: center;
+}
+
+.result-card {
+    margin: 0 20px;
+    width: 360px;
+    border-radius: 3px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .15);
+}
+
+.result-card__img-wrapper {
+    position: relative;
+    padding-top: 56.25%;
+}
+
+.result-card__img {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-50%);
+}
+
+.result-card__body {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.result-card__city,
+.result-card__time {
+    margin: 0;
+    font-size: 18px;
+}
